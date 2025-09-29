@@ -3,6 +3,25 @@ st.write("아래에서 시간표를 입력하고, 저장된 시간표를 확인�
 days = ["월", "화", "수", "목", "금"]
 st.write("## 저장된 시간표")
 import streamlit as st
+import streamlit.components.v1 as components
+import os
+
+# NanumGothic-Regular.ttf 폰트 적용을 위한 CSS 삽입
+font_path = os.path.join("fonts", "NanumGothic-Regular.ttf")
+font_css = f"""
+<style>
+@font-face {{
+    font-family: 'NanumGothic';
+    src: url('{font_path}') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}}
+body, div, input, textarea, table, th, td {{
+    font-family: 'NanumGothic', sans-serif !important;
+}}
+</style>
+"""
+components.html(font_css, height=0)
 
 st.title("학교 시간표 프로그램")
 st.write("아래에서 시간표를 입력하고, 저장된 시간표를 확인하세요.")
