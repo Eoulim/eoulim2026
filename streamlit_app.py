@@ -1,7 +1,4 @@
-st.title("학교 시간표 프로그램")
-st.write("아래에서 시간표를 입력하고, 저장된 시간표를 확인하세요.")
-days = ["월", "화", "수", "목", "금"]
-st.write("## 저장된 시간표")
+## 아래 4줄은 중복 및 오류 발생 코드이므로 제거합니다.
 import streamlit as st
 import streamlit.components.v1 as components
 import os
